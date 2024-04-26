@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 팀장님 프로젝트 FE 분석
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 프로젝트 명
 
-## Available Scripts
+- 가계부 프로젝트
 
-In the project directory, you can run:
+# 프로젝트 설명
 
-### `npm start`
+- 자신이 소비한 항목들을 리스트로 볼 수 있는 가계부 웹 어플리케이션
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 요구사항
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- form 인풋을 통해 이름(String), 가격(Number), 유형(String), 구입날짜(Date), 메모(String) , 재구매 의사 (boolean)을 입력받는다
+- 입력받은 데이터를 최신 순서대로 리스트로 보여준다
+- 유형별 필터를 통해 유형에 맞춰 필터링된 리스트를 볼 수 있다
+- 정렬 기준 → 가격 높은 순, 가격 낮은 순, 최신 순, 오래된 순 (드롭다운 리스트)
+- 기간을 정해 해당 기간에 소비한 내역만 볼 수 있다
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 동작 설명
 
-### `npm run build`
+- 입력동작
+    - 이름, 가격 입력, 유형은 드롭다운 리스트 클릭 , 구입 날짜는 input type을 date로 지정
+    - 메모 체크박스에 체크 하면 메모 input이 보인다
+    - 재구매 의사는 라디오 버튼으로 처리
+    - 저장 버튼 클릭
+- 출력 동작
+    - 바로 밑에 컴포넌트에 목록이 보여진다
+    - 유형 드롭다운 리스트를 클릭하고 유형을 선택하면 해당 유형의 리스트만 쭉 나온다
+    - 정렬 기준을 가격 높은 순으로 하면 가격이 높은 순으로 정렬된다
+    - 정렬 기준을 가격 낮은 순으로 하면 가격이 낮은 순으로 정렬된다
+    - 정렬 기준을 최신순으로 하면 최근에 작성된 것을 기준으로 정렬된다
+    - 정렬 기준을 오래된순으로 하면 가장 나중에 작성된 것부터 최신순으로 정렬된다
+    - 시작 기간과 끝 기간을 설정하면 해당 기간 내의 목록이 정렬된다
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 필요한 컴포넌트
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 입력받는 컴포넌트
+- 출력하는 컴포넌트
+- App에서 입력받는 컴포넌트와 출력하는 컴포넌트 두개를 관리한다
+- 입력후 출력하는 컴포넌트로 데이터를 보내준다
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 기능 구현 순서
 
-### `npm run eject`
+- 우선은 가짜데이터를 몇개 넣어둔다
+- 가짜데이터를 활용해서 출력하는 컴포넌트 먼저 개발한다
+- 입력하는 컴포넌트를 개발한다
+- 입력하는 컴포넌트의 데이터를 출력하는 컴포넌트로 전달되록 개발한다
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 사용 기술
+- 주어진 프로젝트 설명을 명확하게 이해하고 해당 요구사항대로 정확하게 구현을 하는 것에 집중
+-   state, props, event handler를 적절하게 목적에 맞게 사용
+- 하나의 컴포넌트는 하나의 역할을 하는 방향으로 만들어 본다
+- 변수명, 함수명을 명시적으로 바로 잘 이해할 수 있게 작성
