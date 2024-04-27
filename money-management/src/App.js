@@ -53,6 +53,15 @@ const [consumptionList, setConsumptionList] = useState([
       memo: "React 책 샀다",
       buyAgainYesOrNo: "buy-again-radio",
     },
+    {
+      id: "6",
+      name: "감기몸살",
+      price: "3000",
+      category: "병원",
+      date: "2024-02-15",
+      memo: "몸살나서 병원감",
+      buyAgainYesOrNo: "buy-not-again-radio",
+    },
 ]);
 
   return (
