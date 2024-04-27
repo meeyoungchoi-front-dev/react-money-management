@@ -11,7 +11,7 @@ const ConsumptionCategoryFilter = (props) => {
             <div className="new-money-account-control">
                 <label for="category">유형</label>
                 <select name="category" id="category" onChange={dropDownChangeHandler}>
-                    <option value="식료품">식료품</option>
+                    <option value="식음료">식음료</option>
                     <option value="도서">도서</option>
                     <option value="옷">옷</option>
                     <option value="병원">병원</option>
