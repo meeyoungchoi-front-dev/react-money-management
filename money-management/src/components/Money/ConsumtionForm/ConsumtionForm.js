@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MoneyItem = () => {
+const ConsumptionForm = () => {
     return (
         <div className="new-money-account">
             <form>
@@ -50,4 +50,4 @@ const MoneyItem = () => {
     );
 };
 
-export default MoneyItem;
+export default ConsumptionForm;
