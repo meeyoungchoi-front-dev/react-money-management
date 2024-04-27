@@ -1,8 +1,9 @@
 
 const ConsumptionItem = (props) => {
+    console.log(props);
     return (
         <div className="consumption-item">
-            <div className="consuption-item-description">
+            <div className="consuption-item-description" date={props.date}>
                 <div>{props.name}</div>
                 <div>{props.price}</div>
                 <div>{props.category}</div>
