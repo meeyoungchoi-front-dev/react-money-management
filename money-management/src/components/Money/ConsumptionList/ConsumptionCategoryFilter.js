@@ -1,11 +1,16 @@
 import React from 'react';
 
-const ConsumptionCategoryFilter = () => {
+const ConsumptionCategoryFilter = (props) => {
+    const dropDownChangeHandler = (event) => {
+        console.log(event.target.value);
+        props.onChangeFilter(event.target.value);
+    };
+
     return (
         <div>
             <div className="new-money-account-control">
                 <label for="category">유형</label>
-                <select name="category" id="category">
+                <select name="category" id="category" onChange={dropDownChangeHandler}>
                     <option value="식료품">식료품</option>
                     <option value="도서">도서</option>
                     <option value="옷">옷</option>
