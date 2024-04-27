@@ -28,6 +28,9 @@ const ConsumptionList = (props) => {
         console.log("dateSate:", dateState);
     };
 
+
+
+   
     if (sortedCategory.length > 0) {
         console.log("filtering후:", sortedCategory);
         consumptionListContent = sortedCategory.map((item) => (
@@ -41,9 +44,7 @@ const ConsumptionList = (props) => {
             /> 
             
         ));
-    }else
-    
-    if (filterConsumptionList.length > 0) {
+    } else if (filterConsumptionList.length > 0) {
         console.log("filtering후:", filterConsumptionList);
         consumptionListContent = filterConsumptionList.map((item) => (
             <ConsumptionItem
