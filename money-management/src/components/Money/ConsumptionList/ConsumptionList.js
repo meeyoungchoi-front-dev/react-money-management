@@ -16,12 +16,10 @@ const ConsumptionList = (props) => {
         return consumptionList.category === filteredCategory;
     });
 
-    let arrayCopy = [];
     let consumptionListContent = <p>값이 없습니다</p>
     const consumptionSortFilterChangeHandler = (sortedCategory) => {
         setSortedCategory(sortedCategory);
-        console.log("sortedCategory:", sortedCategory);
-        
+        console.log("sortedCategory:", sortedCategory);        
     };
    
     if (sortedCategory.length > 0) {
