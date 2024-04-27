@@ -46,7 +46,7 @@ const [consumptionList, setConsumptionList] = useState([
     },
     {
       id: "5",
-      name: "영풍문고",
+      name: "JavaScript 알고리즘",
       price: "1500",
       category: "도서",
       date: "2024-04-21",
@@ -62,7 +62,49 @@ const [consumptionList, setConsumptionList] = useState([
       memo: "몸살나서 병원감",
       buyAgainYesOrNo: "buy-not-again-radio",
     },
+    {
+      id: "7",
+      name: "JavaScript",
+      price: "35000",
+      category: "도서",
+      date: "2024-03-21",
+      memo: "React 책 샀다",
+      buyAgainYesOrNo: "buy-again-radio",
+    },
+    {
+      id: "8",
+      name: "메가커피 아이스티",
+      price: "2500",
+      category: "식음료",
+      date: "2024-04-21",
+      memo: "메가커피 아이스트",
+      buyAgainYesOrNo: "buy-again-radio",
+    },
+    {
+      id: "8",
+      name: "CSS",
+      price: "34000",
+      category: "도서",
+      date: "2024-04-18",
+      memo: "CSS 책 샀다",
+      buyAgainYesOrNo: "buy-again-radio",
+    },
 ]);
+
+const  getConsumptionSortDate = (data) => {
+  setConsumptionList([
+      {
+        id: data.id,
+        name: data.name,
+        price: data.price,
+        category: data.category,
+        date: new Date(data.date),
+        memo: data.memo,
+        buyAgainYesOrNo: data.buyAgainYesOrNo,
+      }
+
+  ])
+}
 
   return (
     <div className="App">
@@ -70,7 +112,7 @@ const [consumptionList, setConsumptionList] = useState([
         <ConsumptionForm/>
       </section>
       <section>
-        <ConsumptionList items={consumptionList} />
+        <ConsumptionList items={consumptionList}  getConsumptionSortDate={getConsumptionSortDate} />
       </section>  
     </div>
   );
