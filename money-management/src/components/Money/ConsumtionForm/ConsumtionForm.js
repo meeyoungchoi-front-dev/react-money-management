@@ -32,7 +32,7 @@ const MoneyItem = () => {
                         </div>
                         <div className="new-money-account-control">
                             <label for="memo-check">메모</label>
-                            <input type="checkbox" id="memo-check" name="consumption-memo" value=""/>
+                            <input type="checkbox" id="memo-check" name="memo" value=""/>
                         </div>
                         <div className="new-money-account-control">
                             
