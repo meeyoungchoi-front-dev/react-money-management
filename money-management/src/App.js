@@ -103,13 +103,31 @@ const  getConsumptionSortDate = (data) => {
         buyAgainYesOrNo: data.buyAgainYesOrNo,
       }
 
-  ])
-}
+  ]);
+};
+
+const getConsumtionFormData = (data) => {
+  setConsumptionList([
+    {
+      id: data.id,
+        name: data.name,
+        price: data.price,
+        category: data.category,
+        date: new Date(data.date),
+        memo: data.memo,
+        buyAgainYesOrNo: data.buyAgainYesOrNo,
+    },
+  ]);
+};
+
+
+
+
 
   return (
     <div className="App">
       <section>
-        <ConsumptionForm/>
+        <ConsumptionForm getConsumtionFormData={getConsumtionFormData}/>
       </section>
       <section>
         <ConsumptionList items={consumptionList}  getConsumptionSortDate={getConsumptionSortDate} />
